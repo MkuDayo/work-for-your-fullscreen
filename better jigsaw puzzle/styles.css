@@ -1,0 +1,230 @@
+/* Container for the whole puzzle */
+#puzzle-container {
+    width: 1080px;               /* Fixed width of the puzzle */
+    height: 640px;              /* Fixed height of the puzzle */
+    margin: 50px auto;          /* Centers the container horizontally */
+    display: grid;              /* Use grid layout to arrange puzzle pieces */
+    grid-template-columns: repeat(5, 1fr);  /* 3 columns, each taking equal space */
+    grid-template-rows: repeat(5, 1fr);     /* 3 rows, each taking equal space */
+    gap: 2px;                   /* Small gap between pieces */
+    position: relative;         /* To position the pieces absolutely */
+    border: 2px solid #333;     /* Border around the puzzle container */
+    box-sizing: border-box;     /* Include padding and border in the element's total width and height */
+}
+
+/* Style for each puzzle piece */
+.puzzle-piece {
+    width: 100%;                /* Make each piece fit within its grid cell */
+    height: 100%;               /* Make each piece fit within its grid cell */
+    background-size: 1080px 640px; /* Ensure the image covers the full puzzle area */
+    background-repeat: no-repeat;
+    position: absolute;         /* Allows for positioning of each piece within the grid */
+    cursor: pointer;            /* Pointer cursor for draggable pieces */
+}
+
+/* Optional: Remove hover effect if not needed */
+.puzzle-piece:hover {
+    opacity: 1;  /* Removed hover enlargement effect */
+}
+
+.puzzle-piece:hover {
+    opacity: 0.8;
+    border: 2px solid #333;  /* Optional: border when hovered */
+}
+
+
+
+
+/*html stuff*/
+
+#video-container-first {
+    position: relative;
+    width: 720px;
+    height: 480px;
+    margin: 0 auto; /* Center the video container */
+}
+
+#video-container {
+    position: relative;
+    width: 1080px;
+    height: 640px;
+    margin: 0 auto; /* Center the video container */
+}
+
+body, h1, h2, p, button, a {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+#controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1080px;
+    margin: 10px auto; /* Center the controls container and add margin */
+}
+
+#play-pause-button, #fullscreen-button {
+    background-color: #4784d4;
+    border-radius: 5px;
+    border: 2px solid rgb(183, 205, 235); 
+    cursor: pointer;
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: translate, transform .1s ease-in-out;
+}
+
+#progress-bar {
+    flex-grow: 1;
+    height: 12px;
+    background-color: #333;
+    margin-left: 30px;
+    margin-right: 30px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5pt;
+    border: 1px solid #333;
+    transition: transform .1s ease-in-out;
+}
+
+h2 {
+    text-align: left;
+    font-size: 30pt;
+    font-weight: normal;
+}
+
+#title-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1080px;
+    margin: 10px auto; /* Center the controls container and add margin */
+}
+
+#play-pause-button:hover, #fullscreen-button:hover {
+    background-color: rgb(41, 150, 50);
+    transform: scale(1.08) translate(0px,-2px);
+}
+
+#progress-bar:hover {
+    transform:scale(1.03);
+}
+
+#punishment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1080px;
+    padding: 15pt;
+    margin: 30px auto; /* Center the controls container and add margin */
+    background-color: rgb(252, 177, 177);
+    border: none;
+    border-radius: 5pt;
+}
+
+h3 {
+    color: rgb(139, 6, 6);
+}
+
+h1 {
+    font-size: 40pt;
+    font-weight: bold;
+    background-color: #4784d4;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px;
+    width: fit-content;
+    height: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8pt;
+}
+
+.title-container {
+    background-color: #b0c4e0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10pt;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+#spacer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.format-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.cool-stuff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+
+.related-videos {
+    flex-grow: 1;
+    margin-right: 50px;
+    padding: 10px;
+    background-color: #ebebeb;
+    border: 1px solid #ebebeb;
+    border-radius: 5pt;
+    text-align: center;
+}
+
+.inner-div {
+    flex-grow: 1;
+    border: 5pt none #15ff00;
+    border-radius: 5pt;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rec-vid-title {
+    border: red;
+    flex-grow: 1;
+    margin-left: 10px;
+    justify-content: flex-start;
+    flex-direction: row 2;
+}
+
+h4 {
+    font-size: 20pt;
+    font-weight: normal;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#author {
+    color: grey;
+    font-weight: lighter;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#h3-helper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
